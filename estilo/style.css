@@ -1,0 +1,168 @@
+@charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family:'pimbal' ;
+    src: url('fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+
+}
+*{
+    margin: 0px;
+    padding: 0px; 
+    
+}
+
+
+:root {
+--cor0:#c5ebd6;
+--cor1:#83e1ad;
+--cor2:#3ddc84;
+--cor3:#2fa866;
+--cor4:#1a5c37;
+--cor5:#063d1e;
+--fonte-padrao:Arial,Verdana,Helvetica,Sans-serif;
+--fonte-destaque:"Bebas Neue",Arial;
+--fonte-android:"Anonymous Pro", monospace;
+--fonte-pimbal:'pimbal','cursiva';
+}
+
+body{background-color:var(--cor0);
+    font-family: var(--fonte-padrao);
+
+}
+header{
+    background-color: var(--cor4);
+    margin: auto;
+   background-image:linear-gradient(to bottom,var(--cor3), var(--cor4) );
+   min-height: 150px;
+   padding-top: 40px;
+}
+header > h1{
+    color:white;
+   font-family: var(--fonte-destaque);
+   font-size: 3em;
+   text-align: center;
+   text-shadow:  8px 10px black;
+   font-weight: normal; /* serve para deixar normal */
+}
+header > p{
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+nav{ text-align: center;
+    background-color: var(--cor5);
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.562);
+}
+nav a {  /* somente as letras*/ 
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    margin: auto;
+   padding-top: 5px;
+   padding-left: 5px;
+   padding-right: 5px; 
+   padding-bottom: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-duration: 0.5s;
+}
+nav>a:hover {
+    background-color: var(--cor3);
+    color: var(--cor5);
+    box-shadow: 0 7px 7px;
+     }
+
+main{
+    background-color: white;
+    min-width: 300px; /*tamanho do principal min e max as imagens tinham crescido pq nao tinhamos colocado o tamanho max e minimo da página */
+    max-width: 1000px;
+   margin: auto;
+    margin-bottom: 30px; /*serve para deixar separado*/
+    
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.678);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;   
+}
+main p{
+    margin: 15px 0px;
+    text-align: justify; 
+    text-indent: 30px; /* espaço de um dedo no começo do parágrafo*/
+    line-height: 2em; /* altura da lina*/
+}
+main  h1 {
+    color:var(--cor5);
+    font-family:var(--fonte-pimbal);
+     font-weight: normal;
+     font-size: 1.8em;
+}
+main h2 {
+    color: var(--cor4);
+    font-family:var(--fonte-pimbal);
+    font-size: 1.3em;
+    background-image: linear-gradient(to right, #83e1ad42, transparent);  /* deu um transparente no fundo da imagem*/
+    box-shadow:0px 0px 6px#c5ebd6ef;
+     font-weight: normal;
+
+    text-indent: 8px;
+
+}
+main img{
+    width: 100%;
+
+} 
+main img.bugdroid{
+    max-width: 350px; /* o tamanho max que a imagem vai crescer*/
+    margin: auto;
+    display: block;/* imagem por padrao nao é um block eu teria que colocar um display block nela*/
+}
+aside{
+   
+    background-color:var(--cor1);
+    border-radius: 10px;
+    padding: 10px;
+}
+aside ul {
+    list-style-type:'\2714'; /* escolher o simbulo da lista 2714 é o numero do check */
+    list-style-position: inside; /* faz alterar a posiçao da lista*/
+    columns: 2; /*quantidade de coluna*/
+}
+footer{
+   
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+    
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    
+}
+div.video{
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 58%; /* nesse casp a barra preta do video vai diminuir ou alterar*/
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top:5% ; /* margem*/
+    left:5% ; /*margem*/
+    width: 90%;  /* largura do video*/
+    height: 90%;/*altura do video*/
+}
